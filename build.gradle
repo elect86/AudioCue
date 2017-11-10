@@ -1,5 +1,8 @@
 apply plugin: 'java'
 
+// jitpack
+apply plugin: 'maven'
+
 buildscript {
 
     repositories {
@@ -8,13 +11,9 @@ buildscript {
     }
 }
 
-dependencies {
-
-    
-}
-
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 task packageSources(type: Jar, dependsOn: 'classes') {
